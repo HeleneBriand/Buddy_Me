@@ -25,6 +25,8 @@ class BuddiesController < ApplicationController
     redirect_to buddies_path status: :see_other
   end
 
+  private
+
   def set_buddy
     @buddy = Buddy.find(params[:id])
   end
