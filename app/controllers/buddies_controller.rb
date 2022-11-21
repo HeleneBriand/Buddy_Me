@@ -1,12 +1,10 @@
 class BuddiesController < ApplicationController
-
+  before_action :set_buddy, only: [:show]
   def index
     @buddies = Buddy.all
   end
 
-  def show
-    @buddy = Buddy.find(params[:id])
-  end
+  def show; end
 
   def new
     @buddy = Buddy.new
@@ -17,16 +15,21 @@ class BuddiesController < ApplicationController
     if @buddy.save
       redirect_to buddy_path(@buddy)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
 
   end
 
   def destroy
+    @buddy.destroy
+    redirect_to buddies_path status: :see_other
+  end
+
+  def set_buddy
+    @buddy = Buddy.find(params[:id])
   end
 
   def buddy_params
-    params.require(:user).permit(:description, :category)
-
+    params.require(:buddy).permit(:description, :category)
   end
 end
