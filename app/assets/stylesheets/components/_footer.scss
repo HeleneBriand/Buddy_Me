@@ -1,0 +1,37 @@
+.footer {
+  text-decoration: none;
+  color: inherit;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 1%, rgba(253,29,129,1) 38%, rgba(221,177,22,1) 87%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+
+}
+.footer-links {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  text-decoration: none;
+  color: inherit;
+  color: rgb(0, 0, 0);
+  /* opacity: 0.15; */
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.7;
+}
+.footer .fa-heart {
+  text-decoration: none;
+  color: inherit;
+  color: #D23333;
+}
