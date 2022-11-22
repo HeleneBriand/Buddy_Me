@@ -9,7 +9,7 @@
 User.create(name: "Nony", age: 23, sex: "male", email: "Nony_bb@gmail.com", password: "Nono13")
 User.create(name: "Intissar", age: 21, sex: "female", email: "inti@gmail.com", password: "bgdu13")
 User.create(name: "Lucas", age: 26, sex: "male", email: "anonymous@gmail.com", password: "nonyloveu")
-User.create(name: "Antoine", age: 18, sex: "male", email: "tonio@gmail.com", password: "petanqueloveur" )
+User.create(name: "Antoine", age: 18, sex: "male", email: "tonio@gmail.com", password: "petanqueloveur")
 
 Buddy.create(user_id: 1, description: "i'am alone and i suffer i want friends please!", category: "all", city: "marseille")
 Buddy.create(user_id: 2, description: "i like to participate to weddings", category: "celebration", city: "nice")
