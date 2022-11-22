@@ -1,0 +1,18 @@
+
+.btn-home {
+  color: rgb(239, 247, 14);
+  // border: 1px solid #f6f4f4;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  // opacity: 0.6;
+  transition: opacity 0.3s ease;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 1%, rgba(253,29,129,1) 38%, rgba(221,177,22,1) 87%);
+  display: flex;
+  justify-content:space-around
+}
+
+// .btn-ghost:hover {
+//   opacity: 1;
+// }
