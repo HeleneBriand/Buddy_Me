@@ -1,78 +1,22 @@
 
-<div class= container-buddies>
-  <div class= text-center>
+<div class= "container-buddies container">
+  <div class= "text-center">
     <h1>All the buddies</h1>
     <p>Find the best buddy for you event</p>
   </div>
+
+
   <div class="all-cards-buddies">
-    <div class="card-buddy">
-      <%= image_tag("buddies/photo_lucas.jpeg") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>Lucas</h2>
-          <p>Available for tennis</p>
+    <% @buddies.each do |buddy| %>
+        <div class="card-buddy col-12 col-lg-4">
+          <%= image_tag("buddies/photo_lucas.jpeg") %>
+          <div class="card-buddy-infos">
+            <div>
+              <h2><%= buddy.user.name %></h2>
+              <p><%= buddy.description %></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
-      <div class="card-buddy">
-      <%= image_tag("buddies/photo_yong_how.png") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>Yong How</h2>
-          <p>Available for weddings</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="card-buddy">
-      <%= image_tag("buddies/photo_nico.jpeg") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>Nicolas</h2>
-          <p>Available for squash</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="card-buddy">
-      <%= image_tag("buddies/photo_thomas.jpeg") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>Thomas</h2>
-          <p>Available for tennis</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="card-buddy">
-      <%= image_tag("buddies/photo_antoine.jpeg") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>Antoine</h2>
-          <p>Available for tennis</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="card-buddy">
-      <%= image_tag("buddies/photo_mia.jpeg") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>Mia</h2>
-          <p>Available for tennis</p>
-        </div>
-      </div>
-    </div>
-
-      <div class="card-buddy">
-      <%= image_tag("buddies/photo_none.jpeg") %>
-      <div class="card-buddy-infos">
-        <div>
-          <h2>None</h2>
-          <p>Available for tennis</p>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
