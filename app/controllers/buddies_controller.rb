@@ -13,8 +13,8 @@ class BuddiesController < ApplicationController
   end
 
   def create
-    @buddy.user = current_user
     @buddy = Buddy.new(buddy_params)
+    @buddy.user = current_user
     if @buddy.save
       redirect_to buddy_path(@buddy)
     else
