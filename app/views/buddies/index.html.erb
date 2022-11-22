@@ -1,5 +1,5 @@
 
-<div class= "container-buddies container">
+<div class= "container-buddies container"  data-controller="cards">
   <div class= "text-center">
     <h1>All the buddies</h1>
     <p>Find the best buddy for you event</p>
@@ -11,13 +11,12 @@
         <div class="card-buddy">
           <%= image_tag("buddies/photo_lucas.jpeg") %>
           <div class="card-buddy-infos">
-            <div>
-              <h2><%= buddy.user.name %></h2>
+           <h2><%= buddy.user.name %></h2>
+            <div class="d-none">
               <p><%= buddy.description %></p>
             </div>
           </div>
         </div>
     <% end %>
-    
   </div>
 </div>
