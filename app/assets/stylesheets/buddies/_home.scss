@@ -1,8 +1,8 @@
 .container-buddies {
   background-color: white;
 }
+
 .all-cards-buddies{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
