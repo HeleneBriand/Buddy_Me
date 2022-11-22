@@ -3,6 +3,8 @@
   background: transparent;
   position: absolute;
   width: 100%;
+  background: rgb(239, 247, 14);
+  // background: linear-gradient(90deg, rgba(131,58,180,1) 1%, rgba(253,29,129,1) 38%, rgba(221,177,22,1) 87%);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,6 +21,11 @@
 
 .nav-link {
   color:black
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
 }
 
 .logo {
