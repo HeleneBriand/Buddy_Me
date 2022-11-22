@@ -1,10 +1,12 @@
 class BuddiesController < ApplicationController
-  before_action :set_buddy, only: [:show]
+  before_action :set_buddy, only: [:show, :destroy]
   def index
     @buddies = Buddy.all
   end
 
-  def show; end
+  def show
+    @event = Event.new
+  end
 
   def new
     @buddy = Buddy.new
@@ -33,6 +35,6 @@ class BuddiesController < ApplicationController
   end
 
   def buddy_params
-    params.require(:buddy).permit(:description, :category)
+    params.require(:buddy).permit(:description, :category, :city)
   end
 end
