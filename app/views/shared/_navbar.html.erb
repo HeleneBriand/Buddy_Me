@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <div class="logo">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <%= image_tag "tinder-icon-logo-black-and-white.png" %>
       <% end %>
       <p><strong>BuddyMe</strong></p>
@@ -15,10 +15,10 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Become buddy", "#", class: "nav-link" %>
+            <%= link_to "Become buddy", new_buddy_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Buddy list", "#", class: "nav-link" %>
+            <%= link_to "Buddy list", buddies_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Location", "#", class: "nav-link" %>
