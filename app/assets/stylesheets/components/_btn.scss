@@ -4,15 +4,23 @@
   // border: 1px solid #f6f4f4;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
+  font-weight: bolder;
   // opacity: 0.6;
   transition: opacity 0.3s ease;
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 1%, rgba(253,29,129,1) 38%, rgba(221,177,22,1) 87%);
-  display: flex;
-  justify-content:space-around
+  background: rgb(2, 2, 2);
+  // background: linear-gradient(90deg, rgba(131,58,180,1) 1%, rgba(253,29,129,1) 38%, rgba(221,177,22,1) 87%);
+  // display: flex;
+  justify-content:space-around;
+  text-decoration: none;
 }
 
-// .btn-ghost:hover {
-//   opacity: 1;
-// }
+.btn-home a {
+  text-decoration: none;
+  color:rgb(239, 247, 14);
+}
+
+.btn-home a:hover {
+  text-decoration: none;
+  color:rgb(239, 247, 14);
+  opacity: 0.7;
+}
