@@ -1,1 +1,24 @@
-<h1>HI FROM INDEX</h1>
+
+<<<<<<< HEAD
+<div class= "container-buddies container"   data-controller="cards">
+  <div class= "text-center">
+    <h1>Get ready for your next event</h1>
+    <p>here's the buddy you chose</p>
+  </div>
+  <div class="all-cards-buddies">
+    <% @buddies.each do |buddy| %>
+    <div class="card-product">
+      <%= image_tag("buddies/photo_lucas.jpeg") %>
+      <div class="card-product-infos">
+        <h2><%= buddy.user.name %></h2>
+        <p><%= buddy.description %></p>
+      </div>
+    <% end %>
+      <div class="button-home">
+        <%= link_to "Back to the buddy list", buddies_path, class:"btn-home" %>
+      <div class="button-home">
+       <%= link_to "confirm your buddy choice", buddies_path, class:"btn-home" %>
+      </div>
+    </div>
+  </div>
+</div>
