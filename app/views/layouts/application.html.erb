@@ -16,13 +16,14 @@
     <%= render "shared/navbar" %>
     <% end %>
     <style>
-      body { background: rgb(237,237,237)}
+      body { background: rgb(240,240,240)}
     </style>
 
     <%= yield %>
 
     <% unless params[:controller] == 'pages' && params[:action] == 'home' %>
-    <%= render "shared/footer" %>
+    <%# <% unless params[:controller] == 'buddies' && params[:action] == 'new' %> %>
+    <%# <%= render "shared/footer" %> %>
     <% end %>
 
   </body>
