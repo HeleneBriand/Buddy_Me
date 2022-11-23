@@ -8,17 +8,17 @@
       <%# </div> %>
     <%# </div> %>
 
-
 <div class= "container-buddies container"  data-controller="cards">
   <div class= "title-margin">
     <h1 class="h1-size">Find the best buddy for your event</h1>
     <p>Select among all the following buddies the one who will come with you to your event. All our buddies' profiles are verified</p>
+
     <%# <p>Find the best buddy for you event</p> %>
   </div>
   <div class="all-cards-buddies">
     <% @buddies.each do |buddy| %>
         <div class="card-buddy">
-          <%= image_tag("buddies/photo_lucas.jpeg") %>
+          <%= cl_image_tag(buddy.photo.key) %>
           <div class="card-buddy-infos">
            <h2><%= buddy.user.name %></h2>
             <div class="buddy.description">
@@ -29,6 +29,9 @@
             </div>
 
           </div>
+        </div>
+        <div d-none>
+
         </div>
     <% end %>
   </div>
