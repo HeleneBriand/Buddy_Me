@@ -1,26 +1,21 @@
-<div class="banner-buddies">
-  <%# <div class= "container-buddies container"> %>
-    <div class= "text-center buddies">
-      <h1>Find the best buddy for your event</h1>
-      <div class="dropdown category">
-        <%# <p>Find the best buddy for you event</p> %>
-      </div>
-    </div>
+<<<<<<< HEAD
 
-
-    <div class="all-cards-buddies">
-      <% @buddies.each do |buddy| %>
-          <div class="card-buddy">
-            <%= image_tag("buddies/photo_lucas.jpeg") %>
-            <div class="card-buddy-infos">
-              <div>
-                <h2><%= buddy.user.name %></h2>
-                <p><%= buddy.description %></p>
-              </div>
+<div class= "container-buddies container"  data-controller="cards">
+  <div class= "text-center">
+    <h1>All the buddies</h1>
+    <p>Find the best buddy for you event</p>
+  </div>
+  <div class="all-cards-buddies">
+    <% @buddies.each do |buddy| %>
+        <div class="card-buddy">
+          <%= image_tag("buddies/photo_lucas.jpeg") %>
+          <div class="card-buddy-infos">
+           <h2><%= buddy.user.name %></h2>
+            <div class="d-none">
+              <p><%= buddy.description %></p>
             </div>
           </div>
-      <% end %>
-
-    </div>
-  <%# </div> %>
+        </div>
+    <% end %>
+  </div>
 </div>
