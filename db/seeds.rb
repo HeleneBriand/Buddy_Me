@@ -18,7 +18,7 @@ puts "Users finished"
 
 puts "Creating buddies"
 Buddy.create!(user_id: user1.id, description: "i'am alone and i suffer i want friends please!", category: "all", city: "marseille")
-Buddy.create!(user_id: user2.id, description: "i like to participate to weddings", category: "celebration", city: "nice")
+Buddy.create!(user_id: user2.id, description: "i like to participate to weddings", category: "celebrations", city: "nice")
 Buddy.create!(user_id: user3.id, description: "i'm a good listener", category: "workout", city: "paris")
 Buddy.create!(user_id: user4.id, description: "i like to play and drink a lot", category: "all", city: "grenoble")
 puts "Buddies finished"
