@@ -1,5 +1,5 @@
 
-<div class="banner-buddies">
+<div class="banner-buddies" data-controller="cards">
   <%# <div class= "container-buddies container"> %>
     <%# <div class= "text-center buddies">
       <h1><strong></strong>Find the best buddy for your event</strong></h1>
@@ -9,7 +9,7 @@
     <%# </div> %>
 
 
-<div class= "container-buddies container"  data-controller="cards">
+<div class= "container-buddies container">
   <div class= "text-center">
     <h1>Find the best buddy for you event</h1>
     <%# <p>Find the best buddy for you event</p> %>
@@ -17,13 +17,16 @@
   <div class="all-cards-buddies">
     <% @buddies.each do |buddy| %>
         <div class="card-buddy">
-          <%= image_tag("buddies/photo_lucas.jpeg") %>
+          <%= cl_image_tag(buddy.photo.key) %>
           <div class="card-buddy-infos">
            <h2><%= buddy.user.name %></h2>
             <div class="d-none">
               <p><%= buddy.description %></p>
             </div>
           </div>
+        </div>
+        <div d-none>
+
         </div>
     <% end %>
   </div>
