@@ -12,7 +12,8 @@
   // margin-top: 50px;
   // width: 70%;
   // height: 500px;
-  width: 70%;
+  // width: 70%;
+  padding: 20px;
 }
 
 .image {
@@ -27,6 +28,7 @@
 .name {
   // margin-top: -513px;
   // margin-left: 460px;
+  font-weight: bolder;
 }
 
 
@@ -42,5 +44,23 @@
 
 .description {
 // margin-top: -300px;
+font-style: italic;
+
+}
+
+.btn-resa {
+
+  background-color: black;
+  color:#fee30c;
+  padding: 9px 16px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-resa:hover {
+  background: rgb(13, 13, 13);
+  color: white;
 
 }

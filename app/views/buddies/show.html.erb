@@ -17,6 +17,6 @@
     <div class="city">
       <p>📍<%=  @buddy.city %></p>
     </div>
+    <%= link_to "Create a reservation for #{@buddy.user.name}", buddy_create_reservation_path(@buddy), data: {turbo_method: :post}, class:"btn-resa"%>
   </div>
 </div>
-<%= link_to "Create a reservation for #{@buddy.user.name}", buddy_create_reservation_path(@buddy), data: {turbo_method: :post} %>
