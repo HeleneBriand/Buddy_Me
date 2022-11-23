@@ -5,19 +5,18 @@
     <p>here's the buddy you chose</p>
   </div>
   <div class="all-cards-buddies">
-    <% @buddies.each do |buddy| %>
+    <% @events.each do |event| %>
     <div class="card-product">
-      <%= image_tag("buddies/photo_lucas.jpeg") %>
+      <%#= image_tag("link") %>
       <div class="card-product-infos">
-        <h2><%= buddy.user.name %></h2>
-        <p><%= buddy.description %></p>
+        <%= event.status %>
       </div>
-    <% end %>
+      <% end %>
+      </div>
+    </div>
       <div class="button-home">
         <%= link_to "Back to the buddy list", buddies_path, class:"btn-home" %>
       <div class="button-home">
        <%= link_to "confirm your buddy choice", buddies_path, class:"btn-home" %>
-      </div>
-    </div>
   </div>
 </div>
