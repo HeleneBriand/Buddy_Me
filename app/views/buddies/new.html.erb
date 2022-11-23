@@ -1,7 +1,7 @@
 <h1>hi from Buddies#new</h1>
 <%= simple_form_for @buddy do |f| %>
   <%= f.input :description %>
-  <%= f.input :category %>
+  <%= f.input :category, collection: Buddy::CATEGORY %>
   <%= f.input :city %>
   <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
