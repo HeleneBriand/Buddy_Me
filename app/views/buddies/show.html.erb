@@ -1,5 +1,22 @@
-<h1>hi from Buddies#show</h1>
 
-<%# <%= simple_form_for [@buddy, @event] do |f| %>
-  <%# <%= f.button :submit %>
-<%# <% end %>
+
+<div class="container">
+  <div class="profile">
+    <div class="image">
+      <%= cl_image_tag @buddy.photo.key%>
+    </div>
+    <div class="name">
+      <h2><%= @buddy.user.name %></h2>
+    </div>
+    <div class="age">
+      <p><%= @buddy.user.age %></p>
+    </div>
+    <div class="description">
+      <p><%= @buddy.description %></p>
+    </div>
+    <div class="city">
+      <p>📍<%=  @buddy.city %></p>
+    </div>
+  </div>
+</div>
+<%= link_to "Create a reservation for #{@buddy.user.name}", buddy_create_reservation_path(@buddy), data: {turbo_method: :post} %>

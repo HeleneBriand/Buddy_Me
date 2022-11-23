@@ -2,7 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :destroy]
 
   def index
-    @events = Event.all
+    @events = current_user.events
+    
   end
 
   def show; end
@@ -13,7 +14,7 @@ class EventsController < ApplicationController
     @event.user = current_user
     @event.buddy = @buddy
     if @event.save!
-      redirect_to buddies_path
+      redirect_to buddy_events_path
     else
       render buddy_path(@buddy), status: :unprocessable_entity
     end
