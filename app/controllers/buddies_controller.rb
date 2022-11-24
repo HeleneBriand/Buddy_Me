@@ -1,5 +1,5 @@
 class BuddiesController < ApplicationController
-  before_action :set_buddy, only: [:show, :destroy]
+  before_action :set_buddy, only: %i[edit update show destroy]
   def index
     @buddies = Buddy.all
     if params[:query].present?
@@ -7,7 +7,6 @@ class BuddiesController < ApplicationController
     else
       @buddies = Buddy.all
     end
-
     # @buddies = FBuddy.all
     # The `geocoded` scope filters only flats with coordinates
     @markers = @buddies.geocoded.map do |buddy|
@@ -20,7 +19,7 @@ class BuddiesController < ApplicationController
 
   def show
     @event = Event.new
-    @buddes = Buddy.all
+    # @buddies = Buddy.all
   end
 
   def new
@@ -37,9 +36,18 @@ class BuddiesController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @buddy.update(buddy_params)
+      redirect_to buddy_events_path(@buddy)
+    else
+      render :new
+    end
+  end
+
   def destroy
     @buddy.destroy
-    redirect_to buddies_path status: :see_other
   end
 
   private
@@ -49,7 +57,7 @@ class BuddiesController < ApplicationController
   end
 
   def buddy_params
-    params.require(:buddy).permit(:description, :category, :city, :photo)
+    params.require(:buddy).permit(:description, :category, :city)
   end
 end
 

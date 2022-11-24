@@ -23,7 +23,6 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    # redirect_to buddies_path status: :see_other
   end
 
   private

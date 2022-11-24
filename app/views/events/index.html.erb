@@ -1,7 +1,3 @@
-
-
-
-
 <div class="dashbord-container">
   <div class="my-profile">
     <div class="me">
@@ -27,9 +23,10 @@
         <div class="category">
           <p><%= buddy.category %></p>
         </div>
+        <%= link_to "Update my buddy profile", edit_buddy_path(buddy), class:"btn-home" %>
+        <%= link_to "Delete my buddy profile", buddy_path(buddy), data: { turbo_method: :delete ,confirm: "Are you sure you want to remove #{buddy.user.name}"} %>
       <% end %>
-          <%= link_to "Update my buddy profile", edit_buddy_path, class:"btn-home" %>
-          <%= link_to "Delete my buddy profile", buddies_path, class:"btn-home" %>
+
     </div>
   </div>
 
