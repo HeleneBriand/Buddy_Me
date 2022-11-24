@@ -52,3 +52,18 @@ user12 = User.create!(name: "Adrien", age: 25, sex: "male", email: "adrien@gmail
 user12.photo.attach(io: adrien, filename: "adrien.png", content_type: "image/png")
 puts "Users finished"
 
+puts "Creating buddies"
+nony1 = Buddy.create!(user_id: user0.id, description: "I want to do some sport: badminton or tennis", category: "workout", city: "marseille")
+mathilde1 = Buddy.create!(user_id: user1.id, description: "I want people to code in Ruby and rails with me", category: "work", city: "marseille")
+inti = Buddy.create!(user_id: user2.id, description: "I like to participate to weddings", category: "celebrations", city: "nice")
+lulu = Buddy.create!(user_id: user3.id, description: "I'm a good table tennis player", category: "workout", city: "paris")
+tonio = Buddy.create!(user_id: user4.id, description: "I like to play and drink a lot", category: "love", city: "marseille")
+juju = Buddy.create!(user_id: user5.id, description: "I want to go to India, do you want to come with me?", category: "holidays", city: "grenoble")
+lulucie = Buddy.create!(user_id: user6.id, description: "I love playing squash, do you want to come with me every monday?", category: "workout", city: "amiens")
+joie = Buddy.create!(user_id: user7.id, description: "I am looking for my future husband", category: "love", city: "grenoble")
+mimi = Buddy.create!(user_id: user8.id, description: "I would like to travel across Europe by train", category: "holidays", city: "nice")
+nicolas = Buddy.create!(user_id: user9.id, description: "I like to party and meet new friends", category: "celebrations", city: "toulon")
+helene1 = Buddy.create!(user_id: user10.id, description: "I like to play football", category: "workout", city: "paris")
+hermann1 = Buddy.create!(user_id: user11.id, description: "I am looking for my next intern", category: "work", city: "nimes")
+adri = Buddy.create!(user_id: user12.id, description: "I am looking for my future wife", category: "love", city: "lyon")
+puts "Buddies finished"
