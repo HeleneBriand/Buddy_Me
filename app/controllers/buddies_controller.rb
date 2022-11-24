@@ -3,18 +3,24 @@ class BuddiesController < ApplicationController
   def index
     # @buddies = Buddy.all
     if params[:query].present?
-      sql_query = <<~SQL
-        buddies.category @@ :query
-        OR buddies.city @@ :query
-      SQL
-      @buddies = Buddy.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+      @buddies = Buddy.global_search(params[:query])
     else
       @buddies = Buddy.all
+    end
+
+    # @buddies = FBuddy.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @buddies.geocoded.map do |buddy|
+      {
+        lat: buddy.latitude,
+        lng: buddy.longitude
+      }
     end
   end
 
   def show
     @event = Event.new
+    @buddes = Buddy.all
   end
 
   def new
