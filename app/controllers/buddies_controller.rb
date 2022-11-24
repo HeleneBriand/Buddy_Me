@@ -1,7 +1,7 @@
 class BuddiesController < ApplicationController
   before_action :set_buddy, only: [:show, :destroy]
   def index
-    # @buddies = Buddy.all
+    @buddies = Buddy.all
     if params[:query].present?
       sql_query = <<~SQL
         buddies.category @@ :query

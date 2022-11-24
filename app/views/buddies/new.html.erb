@@ -12,8 +12,8 @@
               <%= f.input :category, collection: Buddy::CATEGORY %>
               <%= f.input :city %>
               <%= f.input :photo, as: :file %> <br>
-              <%= link_to "Create my buddy profil", buddies_path, class:"btn-new text-center" %>
-              <%=  %>
+              <%= f.button :submit  %>
+
             <% end %>
             <br>
           </div>
