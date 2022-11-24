@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   resources :buddies do
+    # post "buddies", to: "buddies#destroy", as: :destroy
     resources :events, only: %i[index show]
     post "events", to: "events#create", as: :create_reservation
   end
