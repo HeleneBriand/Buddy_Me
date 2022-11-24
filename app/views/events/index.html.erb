@@ -28,6 +28,8 @@
           <p><%= buddy.category %></p>
         </div>
       <% end %>
+          <%= link_to "Update my buddy profile", edit_buddy_path, class:"btn-home" %>
+          <%= link_to "Delete my buddy profile", buddies_path, class:"btn-home" %>
     </div>
   </div>
 
@@ -39,7 +41,7 @@
     <div class="all-cards-buddies">
     <% @events.each do |event| %>
       <div class="card-buddy">
-        <%# <%= cl_image_tag event.buddy.photo.key %> %>
+         <%= cl_image_tag event.buddy.user.photo.key %>
             <div class="card-buddy-infos">
               <%= event.buddy.user.name %>
             </div>
