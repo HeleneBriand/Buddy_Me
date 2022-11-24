@@ -4,7 +4,6 @@
   justify-content: center;
 }
 
-
 .profile {
   position: absolute;
   background-color: #fee30c;
@@ -14,15 +13,33 @@
   // height: 500px;
   // width: 70%;
   padding: 20px;
+  border-radius: 16px;
+}
+.profile:hover {
+  background: #9a8805;
+  color: white;
+  transition: 0.5s;
+
 }
 
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
 .image {
+  display: flex;
+  border-radius: 16px;
   // position: relative;
   // margin: 0px auto;
   // margin-left: -65px;
   // margin-top: -15px;
-  // width: 460px;
-  // height: 529px;
+  //width: 350px;
+  //height: 350px;
+  //background-size:;
+
+}
+
+.img {
+  border-radius: 16px;
 }
 
 .name {
@@ -47,19 +64,37 @@
 font-style: italic;
 
 }
+.buttons {
+display: flex;
+justify-content: space-between;
+}
 
-.btn-resa {
-
+.btn-back {
   background-color: black;
   color:#fee30c;
-  padding: 9px 16px;
-  margin-bottom: 2px;
+  padding: 8px 14px;
+  //margin-bottom: 2px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+.btn-resa {
+  background-color: black;
+  color:#fee30c;
+  padding: 8px 14px;
+  //margin-bottom: 2px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
 }
 
 .btn-resa:hover {
+  background: rgb(13, 13, 13);
+  color: white;
+
+}
+.btn-back:hover {
   background: rgb(13, 13, 13);
   color: white;
 
