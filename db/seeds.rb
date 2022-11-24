@@ -51,6 +51,7 @@ adrien = URI.open("https://avatars.githubusercontent.com/u/107648853?v=4")
 user12 = User.create!(name: "Adrien", age: 25, sex: "male", email: "adrien@gmail.com", password: "adrien")
 user12.photo.attach(io: adrien, filename: "adrien.png", content_type: "image/png")
 puts "Users finished"
+
 puts "Creating buddies"
 Buddy.create!(user_id: user0.id, description: "I want to do some sport: badminton or tennis", category: "workout", city: "marseille")
 Buddy.create!(user_id: user1.id, description: "I want people to code in Ruby and rails with me", category: "work", city: "marseille")
@@ -65,4 +66,5 @@ Buddy.create!(user_id: user9.id, description: "I like to party and meet new frie
 Buddy.create!(user_id: user10.id, description: "I like to play football", category: "workout", city: "paris")
 Buddy.create!(user_id: user11.id, description: "I am looking for my next intern", category: "work", city: "nimes")
 Buddy.create!(user_id: user12.id, description: "I am looking for my future wife", category: "love", city: "lyon")
+
 puts "Buddies finished"

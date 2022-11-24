@@ -9,16 +9,26 @@
 }
 
 .btn {
-  background: radial-gradient(circle, rgba(0,182,253,1) 0%, rgba(254,227,12,1) 64%);
+  background: radial-gradient(circle, rgba(254,227,12,1) 0%, rgba(254,227,12,1) 64%);
   // background: black;
 }
 
-.btn a:hover {
-  background: rgb(13, 13, 13);
+.btn:hover {
+  background: rgba(254,227,12,1);
+  color:white;
 }
 
+// .btn {
+//   background-color:#fee30c;
+//   color:black;
+//   padding: 6px 16px;
+//   margin-bottom: 2px;
+//   border-radius: 10px;
+//   text-decoration: none;
+//   font-weight: 600;
+// }
 
-// .btn-new {
-//   background: radial-gradient(circle, rgba(0,182,253,1) 0%, rgba(254,227,12,1) 64%);
-//   font-weight: bolder;
+// .btn:hover {
+//   background: rgb(13, 13, 13);
+//   color: white;
 // }
