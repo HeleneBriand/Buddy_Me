@@ -17,7 +17,7 @@
 }
 .profile:hover {
   background: #9a8805;
-  color: white;
+  color: black;
   transition: 0.5s;
 
 }
@@ -39,6 +39,7 @@
 }
 .center-image {
   margin: 0 auto;
+  justify-content: center;
 }
 .img {
   border-radius: 16px;
