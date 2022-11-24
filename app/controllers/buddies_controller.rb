@@ -1,7 +1,16 @@
 class BuddiesController < ApplicationController
   before_action :set_buddy, only: [:show, :destroy]
   def index
-    @buddies = Buddy.all
+    # @buddies = Buddy.all
+    if params[:query].present?
+      sql_query = <<~SQL
+        buddies.category @@ :query
+        OR buddies.city @@ :query
+      SQL
+      @buddies = Buddy.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @buddies = Buddy.all
+    end
   end
 
   def show
@@ -37,3 +46,7 @@ class BuddiesController < ApplicationController
     params.require(:buddy).permit(:description, :category, :city, :photo)
   end
 end
+
+
+# OR user.buddy.name @@ :query
+# OR user.buddy.sex @@ :query

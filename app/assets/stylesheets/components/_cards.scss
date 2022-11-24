@@ -6,6 +6,15 @@
   grid-gap: 30px;
 }
 
+//si on change la valeur du margin bottom il faut aussi changer la valeur du margin bottom
+// du btn-seach dans le fichier des btn.scss pour qu'ils aient la même valeur
+.form-control{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+
 // .h1 {
 //   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 // }

@@ -51,3 +51,4 @@ adrien = URI.open("https://avatars.githubusercontent.com/u/107648853?v=4")
 user12 = User.create!(name: "Adrien", age: 25, sex: "male", email: "adrien@gmail.com", password: "adrien")
 user12.photo.attach(io: adrien, filename: "adrien.png", content_type: "image/png")
 puts "Users finished"
+

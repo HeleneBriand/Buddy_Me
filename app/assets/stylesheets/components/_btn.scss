@@ -1,28 +1,29 @@
 
 .btn-home {
-  color: rgb(239, 247, 14);
+  color: #fee30c;
   // border: 1px solid #f6f4f4;
   padding: 14px 24px;
   border-radius: 50px;
   font-weight: bolder;
   // opacity: 0.6;
-  transition: opacity 0.3s ease;
-  background: rgb(2, 2, 2);
+  // transition: opacity 0.3s ease;
+  background: black;
   // background: linear-gradient(90deg, rgba(131,58,180,1) 1%, rgba(253,29,129,1) 38%, rgba(221,177,22,1) 87%);
   // display: flex;
   justify-content:space-around;
   text-decoration: none;
 }
 
-.btn-home a {
-  text-decoration: none;
-  color:rgb(239, 247, 14);
-}
+// .btn-home a {
+//   text-decoration: none;
+//   color:rgb(239, 247, 14);
+// }
 
-.btn-home a:hover {
+.btn-home:hover {
   text-decoration: none;
-  color:rgb(239, 247, 14);
-  opacity: 0.7;
+  background-color:#fee30c;
+  color:black;
+  // opacity: 0.7;
 }
 
 
@@ -32,3 +33,39 @@
   justify-content: center;
 
   }
+
+  // #button de la search bar de l'index de buddies
+
+.btn-search{
+  background-color:#fee30c;
+  color:black;
+  padding: 6px 16px;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-search:hover {
+  background: rgb(13, 13, 13);
+  color: white;
+}
+
+// #button qui permet de sélectionner un buddy de l'index de buddies
+
+.btn-choose {
+  background-color:#fee30c;
+  color:black;
+  padding: 6px 16px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-choose:hover {
+  background: rgb(13, 13, 13);
+  color: white;
+}

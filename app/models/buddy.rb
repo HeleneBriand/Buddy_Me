@@ -1,6 +1,9 @@
 class Buddy < ApplicationRecord
   CATEGORY = ['all', 'celebrations', 'workout', 'work', 'love', 'holidays']
 
+  geocoded_by :city
+  after_validation :geocode, if: :will_save_change_to_city?
+
   belongs_to :user
   has_many :events, dependent: :destroy
   validates :description, length: { minimum: 10 }, presence: true

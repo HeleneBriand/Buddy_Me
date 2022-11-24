@@ -25,8 +25,9 @@
                 required: true %>
 
     <%= f.input :sex,
-                required: true %>
-                
+                required: true,
+                collection: User::SEX %>
+
    <%= f.input :photo, as: :file %>
 
   </div>
