@@ -1,21 +1,53 @@
 
-<div class= "container-buddies container"   data-controller="cards">
-  <div class= "text-center">
-    <h1>Get ready for your next event</h1>
-    <p>here's the buddy you chose</p>
-  </div>
-  <div class="all-cards-buddies">
-   <% @events.each do |event| %>
-    <div class="card-buddy">
-      <%= cl_image_tag event.buddy.photo.key %>
-          <div class="card-buddy-infos">
-            <%= event.buddy.user.name %>
-          </div>
+
+
+
+<div class="dashbord-container">
+  <div class="my-profile">
+    <div class="me">
+      <div class="image">
+        <%= cl_image_tag @user.photo.key%>
+      </div>
+       <div class="name">
+        <h2><%= @user.name %></h2>
+      </div>
+      <div class="age">
+        <p><%= @user.age %></p>
+      </div>
+      <div class="sex">
+        <p><%= @user.sex %></p>
+      </div>
+      <% @buddies.each do |buddy| %>
+        <div class="description">
+          <p><%= buddy.description %></p>
+        </div>
+        <div class="city">
+          <p>📍<%= buddy.city %></p>
+        </div>
+        <div class="category">
+          <p><%= buddy.category %></p>
         </div>
       <% end %>
+    </div>
   </div>
-</div>
-      <div class="button-home text-center">
-        <%= link_to "Back to the buddy list", buddies_path, class:"btn-home" %>
 
+  <div class= "container-buddies container">
+    <div class= "text-center">
+      <h1>Get ready for your next event</h1>
+      <p>here's the buddy you chose</p>
+    </div>
+    <div class="all-cards-buddies">
+    <% @events.each do |event| %>
+      <div class="card-buddy">
+        <%# <%= cl_image_tag event.buddy.photo.key %> %>
+            <div class="card-buddy-infos">
+              <%= event.buddy.user.name %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>
+  <div class="button-home text-center">
+    <%= link_to "Back to the buddy list", buddies_path, class:"btn-home" %>
+  </div>
 </div>

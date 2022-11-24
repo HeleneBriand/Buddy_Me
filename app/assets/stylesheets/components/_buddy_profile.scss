@@ -9,47 +9,21 @@
   position: absolute;
   background-color: #fee30c;
   margin-top: 20px;
-  // margin-top: 50px;
-  // width: 70%;
-  // height: 500px;
-  // width: 70%;
   padding: 20px;
 }
 
-.image {
-  // position: relative;
-  // margin: 0px auto;
-  // margin-left: -65px;
-  // margin-top: -15px;
-  // width: 460px;
-  // height: 529px;
-}
 
 .name {
-  // margin-top: -513px;
-  // margin-left: 460px;
   font-weight: bolder;
 }
 
 
-.age {
-  // margin-top: 100px;
-}
-
-
-.city {
-  // margin-top: 200px;
-}
-
 
 .description {
-// margin-top: -300px;
-font-style: italic;
-
+  font-style: italic;
 }
 
 .btn-resa {
-
   background-color: black;
   color:#fee30c;
   padding: 9px 16px;
@@ -62,5 +36,4 @@ font-style: italic;
 .btn-resa:hover {
   background: rgb(13, 13, 13);
   color: white;
-
 }
