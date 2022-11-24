@@ -1,13 +1,11 @@
 
 <div class="banner-buddies">
 
-
   <div class= "container-buddies container"  data-controller="cards">
     <div class= "title-margin">
       <h1 class="h1-size">Find the best buddy for your event</h1>
       <p>Select among all the following buddies the one who will come with you to your event. All our buddies' profiles are verified</p>
     </div>
-
 
 <%= form_with url: buddies_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
@@ -33,17 +31,11 @@
             </div>
             <div class="d-flex justify-content-center">
               <%= link_to "choose", buddy_path(buddy), class:"btn-choose text-center"%>
-
             </div>
           </div>
+        </div>
       <% end %>
-    </div>
-
-    <div style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+  </div>
 
     <div style="width: 100%; height: 600px;"
     class = "map-style"
@@ -54,4 +46,3 @@
 </div>
 
   <%# CATEGORY = ['all', 'celebrations', 'workout', 'work', 'love', 'holidays'] %>
-
