@@ -18,3 +18,4 @@ class Buddy < ApplicationRecord
                     },
                     using: { tsearch: { prefix: true } }
 end
+#coucou
