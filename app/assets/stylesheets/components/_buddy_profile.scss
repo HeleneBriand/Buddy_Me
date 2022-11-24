@@ -8,10 +8,6 @@
   position: absolute;
   background-color: #fee30c;
   margin-top: 20px;
-  // margin-top: 50px;
-  // width: 70%;
-  // height: 500px;
-  // width: 70%;
   padding: 20px;
   border-radius: 16px;
 }
@@ -21,6 +17,7 @@
   transition: 0.5s;
 
 }
+
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
@@ -46,31 +43,19 @@
 }
 
 .name {
-  // margin-top: -513px;
-  // margin-left: 460px;
   font-weight: bolder;
 }
 
 
-.age {
-  // margin-top: 100px;
-}
-
-
-.city {
-  // margin-top: 200px;
-}
-
 
 .description {
-// margin-top: -300px;
-font-style: italic;
-
+  font-style: italic;
 }
 .buttons {
 display: flex;
 justify-content: space-between;
 }
+
 
 .btn-back {
   background-color: black;
@@ -82,6 +67,7 @@ justify-content: space-between;
   font-weight: 600;
 
 }
+
 .btn-resa {
   background-color: black;
   color:#fee30c;
@@ -95,7 +81,6 @@ justify-content: space-between;
 .btn-resa:hover {
   background: rgb(13, 13, 13);
   color: white;
-
 }
 .btn-back:hover {
   background: rgb(13, 13, 13);

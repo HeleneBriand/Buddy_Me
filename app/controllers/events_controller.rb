@@ -3,7 +3,8 @@ class EventsController < ApplicationController
 
   def index
     @events = current_user.events
-    
+    @buddies = current_user.buddies
+    @user = current_user
   end
 
   def show; end

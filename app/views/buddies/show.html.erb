@@ -1,31 +1,31 @@
 
-
-<div class="container-show">
-  <div class="profile grow">
-    <div class="center-image">
-     <div class="image">
-        <%= cl_image_tag(@buddy.photo.key,:width => 300, :height => 300, :crop => :fill) %>
-     </div>
-      <div class="name">
-        <h2><%= @buddy.user.name %></h2>
-     </div>
-     <div class="age">
-        <p><strong><%= @buddy.user.age %></strong> years old</p>
-     </div>
-      <div class="category">
-       <p>Available for <strong><%= @buddy.category %></strong> events !</p>
-      </div>
-     <div class="description">
-        <p>"<%= @buddy.description %>!"</p>
-      </div>
-     <div class="city">
-       <p>📍<strong><%=  @buddy.city %></strong></p>
-      </div>
-      <div class="buttons">
+ <div class="profile grow">
+   <div class="center-image">
+     <% @buddies.each do |buddy| %>
+       <div class="image">
+          <%= cl_image_tag(buddy.user.photo.key,:width => 300, :height => 300, :crop => :fill) %>
+       </div>
+        <div class="name">
+          <h2><%= buddy.user.name %></h2>
+       </div>
+       <div class="age">
+          <p><strong><%= buddy.user.age %></strong> years old</p>
+       </div>
+        <div class="category">
+         <p>Available for <strong><%= buddy.category %></strong> events !</p>
+        </div>
+       <div class="description">
+          <p>"<%= buddy.description %>!"</p>
+        </div>
+       <div class="city">
+         <p>📍<strong><%=  buddy.city %></strong></p>
+        </div>
+     <% end %>
+     <div class="buttons">
         <div class="btn-back">
           <%= link_to "Back to list", buddies_path, class: "btn-back" %>
         </div>
-         <div class="btn-resa">
+        <div class="btn-resa">
           <%= link_to "Book #{@buddy.user.name} !", buddy_create_reservation_path(@buddy), data: {turbo_method: :post}, class:"btn-resa"%>
         </div>
      </div>

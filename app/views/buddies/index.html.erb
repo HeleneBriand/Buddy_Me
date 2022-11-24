@@ -27,7 +27,7 @@
   <div class="all-cards-buddies">
     <% @buddies.each do |buddy| %>
         <div class="card-buddy">
-          <%= cl_image_tag(buddy.photo.key) %>
+          <%# <%= cl_image_tag(buddy.photo.key) %> %>
           <div class="card-buddy-infos">
            <h2><%= buddy.user.name %></h2>
             <div class="buddy.description">
