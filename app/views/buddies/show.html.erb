@@ -1,22 +1,32 @@
 
 
 <div class="container-show">
-  <div class="profile">
+  <div class="profile grow">
     <div class="image">
-      <%= cl_image_tag @buddy.photo.key%>
+      <%= cl_image_tag(@buddy.photo.key,:width => 300, :height => 300, :crop => :fill) %>
     </div>
     <div class="name">
       <h2><%= @buddy.user.name %></h2>
     </div>
     <div class="age">
-      <p><%= @buddy.user.age %></p>
+      <p><strong><%= @buddy.user.age %></strong> years old</p>
+    </div>
+    <div class="category">
+      <p>Available for <strong><%= @buddy.category %></strong> events !</p>
     </div>
     <div class="description">
-      <p><%= @buddy.description %></p>
+      <p>"<%= @buddy.description %>!"</p>
     </div>
     <div class="city">
-      <p>📍<%=  @buddy.city %></p>
+      <p>📍<strong><%=  @buddy.city %></strong></p>
     </div>
-    <%= link_to "Create a reservation for #{@buddy.user.name}", buddy_create_reservation_path(@buddy), data: {turbo_method: :post}, class:"btn-resa"%>
+    <div class="buttons">
+      <div class="btn-back">
+        <%= link_to "Back to list", buddies_path, class: "btn-back" %>
+      </div>
+      <div class="btn-resa">
+        <%= link_to "Book #{@buddy.user.name} !", buddy_create_reservation_path(@buddy), data: {turbo_method: :post}, class:"btn-resa"%>
+      </div>
+    </div>
   </div>
 </div>
