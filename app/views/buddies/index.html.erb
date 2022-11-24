@@ -1,12 +1,5 @@
 
 <div class="banner-buddies">
-  <%# <div class= "container-buddies container"> %>
-    <%# <div class= "text-center buddies">
-      <h1><strong></strong>Find the best buddy for your event</strong></h1>
-      <div class="dropdown category">
-        <%# <p>Find the best buddy for you event</p> %>
-      <%# </div> %>
-    <%# </div> %>
 
 <div class= "container-buddies container"  data-controller="cards">
   <div class= "title-margin">
@@ -23,6 +16,7 @@
   <%= submit_tag "Search", class: "btn-search" %>
 <% end %>
 
+<div class= "cards-map d-flex">
 
   <div class="all-cards-buddies">
     <% @buddies.each do |buddy| %>
@@ -43,10 +37,12 @@
     <% end %>
   </div>
 
-  <div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+    <div style="width: 100%; height: 600px;"
+    class = "map-style"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 </div>
+
   <%# CATEGORY = ['all', 'celebrations', 'workout', 'work', 'love', 'holidays'] %>
