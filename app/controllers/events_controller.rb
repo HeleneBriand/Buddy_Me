@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :destroy]
 
   def index
+    @buddy = Buddy.find(params[:buddy_id])
     @events = current_user.events
     @buddies = current_user.buddies
     @user = current_user
@@ -23,6 +24,25 @@ class EventsController < ApplicationController
     end
   end
 
+
+  def accept
+    @event = Event.find(params[:id])
+    @buddy = Buddy.find(params[:buddy_id])
+    @event.status = "Accepted"
+    @event.save!
+
+    redirect_to buddy_events_path(@buddy, @event)
+  end
+
+  def decline
+    @event = Event.find(params[:id])
+    @buddy = Buddy.find(params[:buddy_id])
+    @event.status = "Declined"
+    @event.save!
+
+    redirect_to buddy_events_path(@buddy, @event)
+  end
+
   def destroy
     @event.destroy
   end
@@ -32,4 +52,8 @@ class EventsController < ApplicationController
   def set_event
     @event = Event.find(params[:id])
   end
+
+  # def event_params
+  #   params.require(:event).permit(:status)
+  # end
 end
