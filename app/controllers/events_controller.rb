@@ -14,6 +14,8 @@ class EventsController < ApplicationController
     @buddy = Buddy.find(params[:buddy_id])
     @event.user = current_user
     @event.buddy = @buddy
+    @event.start_date = params[:event]["start_date"].split("to")[0]
+    @event.end_date = params[:event]["start_date"].split("to")[1]
     if @event.save!
       redirect_to buddy_events_path
     else

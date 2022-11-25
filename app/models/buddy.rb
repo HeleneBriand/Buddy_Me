@@ -17,5 +17,11 @@ class Buddy < ApplicationRecord
                       user: [ :name, :age, :sex ]
                     },
                     using: { tsearch: { prefix: true } }
+
+
+  def unavailable_dates
+    events.pluck(:start_date, :end_date).map do |range|
+      { from: range[0], to: range[1] }
+    end
+  end
 end
-#coucou
