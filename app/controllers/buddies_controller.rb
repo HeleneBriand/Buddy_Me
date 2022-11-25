@@ -1,5 +1,7 @@
 class BuddiesController < ApplicationController
   before_action :set_buddy, only: %i[edit update show destroy]
+  before_action :user_connected, only: [:index, :show, :edit, :new]
+
   def index
     @buddies = Buddy.all
     if params[:query].present?
@@ -20,7 +22,6 @@ class BuddiesController < ApplicationController
 
   def show
     @event = Event.new
-    # @buddies = Buddy.all
   end
 
   def new
@@ -52,6 +53,10 @@ class BuddiesController < ApplicationController
   end
 
   private
+
+  def user_connected
+    @user = current_user
+  end
 
   def set_buddy
     @buddy = Buddy.find(params[:id])

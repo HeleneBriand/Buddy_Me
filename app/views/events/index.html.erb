@@ -1,56 +1,49 @@
 
-<div class="container mt-4">
-  <div class="dashbord-container">
-    <div class="my-profile">
-      <div class="me">
-        <div class="image">
-          <%= cl_image_tag @user.photo.key%>
-        </div>
-        <div class="name">
-          <h2><%= @user.name %></h2>
-        </div>
-        <div class="age">
-          <p><%= @user.age %></p>
-        </div>
-        <div class="sex">
-          <p><%= @user.sex %></p>
-        </div>
-        <% @buddies.each do |buddy| %>
-          <div class="description">
-            <p><%= buddy.description %></p>
-          </div>
-          <div class="city">
-            <p>📍<%= buddy.city %></p>
-          </div>
-          <div class="category">
-            <p><%= buddy.category %></p>
-          </div>
-        <%= link_to "Update my buddy profile", edit_buddy_path(buddy), class:"btn-choose" %>
-        <%= link_to "Delete my buddy profile", buddy_path(buddy), data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %>
-        <% end %>
-      </div>
-    </div>
 
-    <div class= "container-buddies container">
-      <div class= "text-center">
-        <h1><strong>Get ready for your next event</strong></h1>
-        <h4>Here's the buddy you chose 🤜 🤛 : </h4>
+<div class="dashbord-container">
+  <div class="content">
+    <div class="me">
+      <div class="image">
+        <%= cl_image_tag @user.photo.key,  :width=> 150, :height=> 150, :gravity=> :face, :radius=> :max, :crop=> :fill %>
       </div>
+      <div class="infos">
+        <h2><%= @user.name %></h2>
+        <p><%= @user.age %></p>
+        <p><%= @user.sex %></p>
+      </div>
+      <% @buddies.each do |buddy| %>
+        <div class="description">
+          <p>📍<%= buddy.city %></p>
+          <p><%= buddy.description %></p>
+          <p><%= buddy.category %></p>
+        </div>
+        <%= link_to "Update my buddy profile", edit_buddy_path(buddy), class:"btn-choose" %>
+        <%= link_to "Delete my buddy profile", buddy_path(buddy), class:"btn-choose", data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class= "content">
+    <div class= "text-center">
+      <h1><strong>Get ready for your next event</strong></h1>
+      <h4>Here's the buddy you chose 🤜 🤛 : </h4>
+    </div>
+    <% unless @events.empty? %>
       <div class="all-cards-buddies">
-      <% @events.each do |event| %>
-        <div class="card-buddy">
-          <%= cl_image_tag event.buddy.user.photo.key %>
+          <% @events.each do |event| %>
+            <div class="card-buddy">
+              <%= cl_image_tag event.buddy.user.photo.key %>
               <div class="card-buddy-infos">
                 <%= event.buddy.user.name %> <br>
                 📍<%= event.buddy.city %>
+                <%= link_to "Cancel", event_path(event), class:"btn-choose", data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %>
               </div>
             </div>
-            
           <% end %>
-      </div>
-    </div>
-    <div class="button-choose text-center">
+    <% else %>
+     <p>No booking yet</p>
       <%= link_to "Back to the buddy list", buddies_path, class:"btn-choose" %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
