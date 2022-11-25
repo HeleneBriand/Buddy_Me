@@ -10,7 +10,7 @@
 .content {
   display: inline-block;
   border: 1px solid;
-  padding: 2rem 2rem;
+  padding: 2rem 3rem;
   vertical-align: text-top;
   background-color: white;
 
@@ -22,4 +22,17 @@ margin-left: 30px;
 position: sticky;
 width: 600px !important;
 top: 0;
+}
+
+.infos {
+  text-align: center;
+  font-weight: bold;
+
+}
+
+
+.description {
+  text-align: center;
+  font-weight: bold;
+
 }

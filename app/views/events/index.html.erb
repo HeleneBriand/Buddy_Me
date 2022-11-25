@@ -6,23 +6,15 @@
       <div class="image">
         <%= cl_image_tag @user.photo.key,  :width=> 150, :height=> 150, :gravity=> :face, :radius=> :max, :crop=> :fill %>
       </div>
-      <div class="name">
+      <div class="infos">
         <h2><%= @user.name %></h2>
-      </div>
-      <div class="age">
         <p><%= @user.age %></p>
-      </div>
-      <div class="sex">
         <p><%= @user.sex %></p>
       </div>
       <% @buddies.each do |buddy| %>
         <div class="description">
-          <p><%= buddy.description %></p>
-        </div>
-        <div class="city">
           <p>📍<%= buddy.city %></p>
-        </div>
-        <div class="category">
+          <p><%= buddy.description %></p>
           <p><%= buddy.category %></p>
         </div>
         <%= link_to "Update my buddy profile", edit_buddy_path(buddy), class:"btn-choose" %>
