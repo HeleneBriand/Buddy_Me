@@ -1,2 +1,9 @@
 
-<p><%= buddy.city %></p>
+<h3><%= buddy.user.name %></h3>
+<p>📍<%= buddy.city %></p>
+<% if buddy.user.sex == "male" %>
+              <p> 👨<%= buddy.user.sex %></p>
+              <% else %>
+              <p> 👩 <%= buddy.user.sex %></p>
+              <% end %>
+<p><%= buddy.category %></p>
