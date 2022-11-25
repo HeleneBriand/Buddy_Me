@@ -11,7 +11,11 @@
           <div class="infos">
             <h3><strong><%= @user.name %></strong></h3>
             <p><%= @user.age %> years old </p>
-            <p> 👩 <%= @user.sex %></p>
+              <% if @user.sex == "male" %>
+                  <p> 👨 <%= @user.sex %></p>
+                  <% else %>
+                  <p> 👩  <%= @user.sex %></p>
+                  <% end %>
           </div>
           <% @buddies.each do |buddy| %>
             <div class="description-user">
