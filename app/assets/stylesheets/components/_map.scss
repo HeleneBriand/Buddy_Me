@@ -5,7 +5,9 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  padding: 10px 50px 10px;
+  padding: 0px 0px 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border-radius: 5px;
 }
 
 .mapboxgl-popup-content p {
@@ -17,4 +19,17 @@
   position: sticky;
   width: 600px !important;
   top: 100px;
+}
+
+.image-popup img {
+  width: 200px;
+  height: 200px;
+}
+
+.text-popup  {
+ font-size: 14px;
+}
+
+.description-popup {
+  margin-bottom: 10px;
 }
