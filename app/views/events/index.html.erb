@@ -36,7 +36,7 @@
               <div class="card-buddy-infos">
                 <%= event.buddy.user.name %> <br>
                 📍<%= event.buddy.city %>
-                <%= link_to "Cancel", event_path(event), class:"btn-choose", data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %>
+                <%= link_to "Cancel", event_path(event), class:"btn-choose", data: {turbo_confirm: "Are you sure you want to remove", turbo_method: :delete} %>
               </div>
             </div>
           <% end %>
