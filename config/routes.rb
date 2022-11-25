@@ -5,9 +5,15 @@ Rails.application.routes.draw do
 
   resources :buddies do
     # post "buddies", to: "buddies#destroy", as: :destroy
-    resources :events, only: %i[index show]
+    resources :events, only: %i[index show] do
+      member do
+        patch :accept
+        patch :decline
+      end
+    end
     post "events", to: "events#create", as: :create_reservation
   end
+
   resources :events, only: [:destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
