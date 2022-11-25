@@ -9,7 +9,6 @@ export default class extends Controller {
   }
 
   connect() {
-    console.log("deeded");
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -17,11 +16,11 @@ export default class extends Controller {
       style: "mapbox://styles/hebrd/clawfb8np004g14lg8sybaa1u"
     })
 
-    this.#addMarkersToMap()
-    this.#fitMapToMarkers()
+    this.addMarkersToMap()
+    this.fitMapToMarkers()
   }
 
-  #addMarkersToMap() {
+  addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       new mapboxgl.Marker()
@@ -31,7 +30,7 @@ export default class extends Controller {
     });
   }
 
-  #fitMapToMarkers() {
+  fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })

@@ -4,7 +4,6 @@
   <div class="profile grow">
     <div class="center-image">
         <div class="image">
-
           <%= cl_image_tag(@buddy.user.photo.key,:width => 300, :height => 300, :crop => :fill) %>
         </div>
         <div class="name">
@@ -22,14 +21,22 @@
         <div class="city">
          <p>📍<strong><%= @buddy.city %></strong></p>
         </div>
-      <div class="buttons">
-        <div class="btn-back">
-          <%= link_to "Back to list", buddies_path, class: "btn-back" %>
+        <div id='buddy-event-dates' data-unavailable="<%= @buddy.unavailable_dates.to_json %>">
+          <% if current_user.id != @buddy.user_id  %>
+            <%= simple_form_for([@buddy, @event]) do |f| %>
+            <%= f.input :start_date, as: :string, type: :text %>
+            <%= f.submit "Book", class: "btn-back" %>
+            <% end %>
+          <% end %>
         </div>
-        <div class="btn-resa">
-          <%= link_to "Book #{@buddy.user.name} !", buddy_create_reservation_path(@buddy), data: {turbo_method: :post}, class:"btn-resa"%>
+        <div class="buttons">
+          <div class="btn-back">
+            <%= link_to "Back to list", buddies_path, class: "btn-back" %>
+          </div>
+          <div class="btn-resa">
+            <%= link_to "Book #{@buddy.user.name} !", buddy_create_reservation_path(@buddy), data: {turbo_method: :post}, class:"btn-resa"%>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 </div>

@@ -34,7 +34,7 @@
               <p> 👉 available for: <%= buddy.category %></p>
             </div>
             <div class="d-flex justify-content-center">
-              <%= link_to "choose", buddy_path(buddy), class:"btn-choose text-center"%>
+              <%= link_to "choose", buddy_path(buddy), data: { turbolinks: false }, class:"btn-choose text-center"%>
             </div>
           </div>
         </div>

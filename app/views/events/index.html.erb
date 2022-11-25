@@ -23,7 +23,7 @@
             <%= link_to "Update my buddy profile", edit_buddy_path(buddy), class:"btn-choose" %> <br>
             </div>
             <div class="bouton2-profil-user">
-            <%= link_to "Delete my buddy profile", buddy_path(buddy), class:"btn-choose", data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %> <br>
+            <%= link_to "Delete my buddy profile", buddy_path(buddy), class:"btn-choose", data: { turbo_confirm: "Are you sure you want to cancel", turbo_method: :delete} %> <br>
             </div>
           <% end %>
       </div>
@@ -48,7 +48,7 @@
                       <%= event.buddy.user.name %> <br>
                       📍<%= event.buddy.city %>
                       <br>
-                      <%= link_to "Cancel", event_path(event), class:"btn-choose", data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %>
+                      <%= link_to "Decline", event_path(event), class:"btn-choose", data: { turbo_confirm: "Are you sure you want to decline", turbo_method: :delete} %>
                     </div>
                   </div>
                 <% end %>
@@ -63,8 +63,8 @@
 
 
 
-
     <div class= "content-resa">
+
       <div class="me-buddy">
         <div class= "text-center">
           <div class="h2-user-profile"><h2><strong>My bookings</strong></h2>
@@ -82,10 +82,11 @@
                       <%= event.buddy.user.name %> <br>
                       📍<%= event.buddy.city %>
                       <br>
-                      <%= link_to "Cancel", event_path(event), class:"btn-choose", data: { turbo_method: :delete ,confirm: "Are you sure you want to remove"} %>
+                      <%= link_to "Cancel", event_path(event), class:"btn-choose", data: {turbo_confirm: "Are you sure you want to remove", turbo_method: :delete} %>
                     </div>
                   </div>
                 <% end %>
+
               </div>
           </div>
         <% else %>
