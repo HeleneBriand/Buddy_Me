@@ -25,7 +25,11 @@
           <div class="card-buddy-infos">
            <h2><%= buddy.user.name %></h2>
             <div class="buddy.description">
-              <p> 👩 👨<%= buddy.user.sex %></p>
+               <% if buddy.user.sex == "male" %>
+              <p> 👨<%= buddy.user.sex %></p>
+              <% else %>
+              <p> 👩 <%= buddy.user.sex %></p>
+              <% end %>
               <p>📍<%= buddy.city %></p>
               <p> 👉 available for: <%= buddy.category %></p>
             </div>
