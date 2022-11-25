@@ -63,7 +63,7 @@ Buddy.create!(user_id: user6.id, description: "I love playing squash, do you wan
 Buddy.create!(user_id: user7.id, description: "I am looking for my future husband", category: "love", city: "grenoble")
 Buddy.create!(user_id: user8.id, description: "I would like to travel across Europe by train", category: "holidays", city: "nice")
 Buddy.create!(user_id: user9.id, description: "I like to party and meet new friends", category: "celebrations", city: "toulon")
-Buddy.create!(user_id: user10.id, description: "I like to play football", category: "workout", city: "paris")
+# Buddy.create!(user_id: user10.id, description: "I like to play football", category: "workout", city: "paris")
 Buddy.create!(user_id: user11.id, description: "I am looking for my next intern", category: "work", city: "nimes")
 Buddy.create!(user_id: user12.id, description: "I am looking for my future wife", category: "love", city: "lyon")
 
