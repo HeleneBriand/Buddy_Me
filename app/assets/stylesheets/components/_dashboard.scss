@@ -1,27 +1,56 @@
-.dashboard-container {
-  border: 1px solid black;
-  // margin: 1rem;
-  padding: 2rem 2rem;
-  text-align: center;
+// .dashboard-container {
+//   border: 1px solid black;
+//   // margin: 1rem;
+//   padding: 2rem 2rem;
+//   text-align: center;
+// }
 
+.cards-dash {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
 
 }
 
+.container-dash {
+  display: flex;
+  justify-content: center;
+  margin: 18px;
+  margin-top: 30px;
+}
+
+
 .content {
-  display: inline-block;
-  border: 1px solid;
-  padding: 2rem 3rem;
+  // display: inline-block;
+  // border: 1px solid;
+  border-radius: 6px;
+  padding: 8px;
   vertical-align: text-top;
   background-color: white;
-
-  margin-top: 20px;
+  // width: 50%;
+  // margin-top: 20px;
 }
 
 .me {
-margin-left: 30px;
+margin: 10px;
 position: sticky;
-width: 600px !important;
+// width: 600px !important;
 top: 0;
+height: 50%;
+text-align: center;
+font-weight: bold;
+}
+
+
+.me-buddy {
+  margin: 10px;
+// position: sticky;
+// width: 600px !important;
+// top: 0;
+height: 100%;
+text-align: center;
+font-weight: bold;
+border-color: black;
 }
 
 .infos {
@@ -30,9 +59,51 @@ top: 0;
 
 }
 
+.bouton1-profil-user {
+  position: relative;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+}
 
-.description {
+.bouton2-profil-user {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description-user {
   text-align: center;
   font-weight: bold;
+  width : 300px;
+  align-items: center;
+  justify-content: center;
+}
 
+.all-cards-buddies-resa{
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.card-buddy-infos-dash {
+  padding: 10px;
+}
+
+.contour-buddy {
+  margin: 30px;
+}
+
+// .title-profil-user {
+//   height: 15px;
+//   background-color: color;
+//   color: white;
+// }
+
+.h2-user-profile {
+  background-color: black;
+  color: white;
+  border-radius: 6px;
+  padding-top: 3px;
+  padding-bottom: 0.5px;
 }
